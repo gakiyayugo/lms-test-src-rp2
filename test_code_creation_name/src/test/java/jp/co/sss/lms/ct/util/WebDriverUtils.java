@@ -123,4 +123,7 @@ public class WebDriverUtils {
 		return webDriver.findElement(By.className(className));
 	}
 
+	public static String getTitle() {
+		return webDriver.getTitle();
+	}
 }

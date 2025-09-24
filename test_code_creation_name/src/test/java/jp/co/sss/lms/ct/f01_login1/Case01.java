@@ -1,6 +1,7 @@
 package jp.co.sss.lms.ct.f01_login1;
 
 import static jp.co.sss.lms.ct.util.WebDriverUtils.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.IOException;
 
@@ -42,6 +43,8 @@ public class Case01 {
 
 		getEvidence(new Object() {
 		});
+
+		assertEquals("ログイン | LMS", getTitle());
 	}
 
 }
