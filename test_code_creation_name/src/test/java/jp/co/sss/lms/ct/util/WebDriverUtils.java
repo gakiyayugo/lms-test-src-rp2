@@ -126,4 +126,9 @@ public class WebDriverUtils {
 	public static String getTitle() {
 		return webDriver.getTitle();
 	}
+
+	public static WebElement getElementText(String Text) {
+		return webDriver.findElement(By.linkText(Text));
+	}
+
 }
