@@ -41,10 +41,11 @@ public class Case01 {
 
 		goTo("http://localhost:8080/lms");
 
+		assertEquals("ログイン | LMS", getTitle());
+
 		getEvidence(new Object() {
 		});
 
-		assertEquals("ログイン | LMS", getTitle());
 	}
 
 }

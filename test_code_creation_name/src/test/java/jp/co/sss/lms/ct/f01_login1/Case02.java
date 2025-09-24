@@ -41,6 +41,8 @@ public class Case02 {
 
 		goTo("http://localhost:8080/lms");
 
+		assertEquals("ログイン | LMS", getTitle());
+
 		getEvidence(new Object() {
 		});
 	}
@@ -62,7 +64,6 @@ public class Case02 {
 		final WebElement error = getElementByclassName("error");
 		assertEquals("* ログインに失敗しました。", error.getText());
 
-		//a
 		getEvidence(new Object() {
 		});
 	}
