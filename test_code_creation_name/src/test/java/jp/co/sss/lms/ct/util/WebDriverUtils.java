@@ -127,8 +127,8 @@ public class WebDriverUtils {
 		return webDriver.getTitle();
 	}
 
-	public static WebElement getElementText(String Text) {
-		return webDriver.findElement(By.linkText(Text));
+	public static WebElement getElementText(String text) {
+		return webDriver.findElement(By.linkText(text));
 	}
 
 }

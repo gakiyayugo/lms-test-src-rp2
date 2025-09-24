@@ -89,11 +89,11 @@ public class Case04 {
 	@DisplayName("テスト04 「よくある質問」リンクからよくある質問画面を別タブに開く")
 	void test04() {
 
-		final WebElement text2 = getElementText("よくある質問");
-		text2.click();
+		final WebElement text = getElementText("よくある質問");
+		text.click();
 
-		System.out.println(getTitle());
-		System.out.println(text2.getText());
+		Object[] windowHandles = webDriver.getWindowHandles().toArray();
+		webDriver.switchTo().window((String) windowHandles[1]);
 		assertEquals("よくある質問 | LMS", getTitle());
 
 	}
