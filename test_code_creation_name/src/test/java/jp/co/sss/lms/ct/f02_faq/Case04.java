@@ -96,6 +96,8 @@ public class Case04 {
 		webDriver.switchTo().window((String) windowHandles[1]);
 		assertEquals("よくある質問 | LMS", getTitle());
 
+		getEvidence(new Object() {
+		});
 	}
 
 }
