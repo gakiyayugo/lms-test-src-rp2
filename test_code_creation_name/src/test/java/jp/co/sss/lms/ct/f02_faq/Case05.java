@@ -107,12 +107,16 @@ public class Case05 {
 	@Order(5)
 	@DisplayName("テスト05 キーワード検索で該当キーワードを含む検索結果だけ表示")
 	void test05() {
-
+		//		
 		final WebElement keyword = getElementByclassName("form-control");
 		keyword.clear();
 		keyword.sendKeys("キャンセル");
-		assertEquals("キャンセル", keyword.getAttribute("value"));
 		keyword.sendKeys(Keys.ENTER);
+
+		pageLoadTimeout(5);
+		final List<WebElement> number = getElementsByListClassName("text-primary");
+		int num = number.size();
+		assertEquals(1, num);
 
 		scrollBy("250");
 

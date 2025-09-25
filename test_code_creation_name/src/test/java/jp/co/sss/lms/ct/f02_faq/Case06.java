@@ -110,6 +110,11 @@ public class Case06 {
 		final WebElement text = getElementText("【研修関係】");
 		text.click();
 
+		pageLoadTimeout(5);
+		final List<WebElement> number = getElementsByListClassName("text-primary");
+		int num = number.size();
+		assertEquals(2, num);
+
 		scrollBy("250");
 
 		getEvidence(new Object() {
@@ -124,6 +129,9 @@ public class Case06 {
 
 		final List<WebElement> answer = getElementsByListClassName("mb10");
 		answer.get(0).click();
+
+		final WebElement display = getElementByclassName("text-warning");
+		assertTrue(display.isDisplayed());
 
 		getEvidence(new Object() {
 		});
