@@ -3,6 +3,7 @@ package jp.co.sss.lms.ct.util;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -129,6 +130,11 @@ public class WebDriverUtils {
 
 	public static WebElement getElementText(String text) {
 		return webDriver.findElement(By.linkText(text));
+	}
+
+	public static List<WebElement> getElementsByListClassName(String className) {
+
+		return webDriver.findElements(By.className(className));
 	}
 
 }
