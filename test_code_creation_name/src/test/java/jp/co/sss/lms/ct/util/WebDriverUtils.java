@@ -137,4 +137,21 @@ public class WebDriverUtils {
 		return webDriver.findElements(By.className(className));
 	}
 
+	public static WebElement getElementBycssSelector(String css) {
+
+		return webDriver.findElement(By.cssSelector(css));
+	}
+
+	public static List<WebElement> getElementsBycssSelector(String css) {
+		return webDriver.findElements(By.cssSelector(css));
+	}
+
+	public static WebElement getElementById(String id) {
+		return webDriver.findElement(By.id(id));
+	}
+
+	public static List<WebElement> getElementsByTagName(String tag) {
+		return webDriver.findElements(By.tagName(tag));
+	}
+
 }
