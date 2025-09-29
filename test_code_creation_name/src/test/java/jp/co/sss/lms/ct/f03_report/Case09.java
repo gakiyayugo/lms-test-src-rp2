@@ -117,13 +117,8 @@ public class Case09 {
 		submit.click();
 
 		final WebElement error = getElementByclassName("errorInput");
-		String errorcheck = "";
 
-		if (error.isDisplayed()) {
-			errorcheck = "true";
-		}
-
-		assertEquals("true", errorcheck);
+		assertTrue(error.isDisplayed());
 
 		getEvidence(new Object() {
 		});
@@ -149,13 +144,8 @@ public class Case09 {
 		submit.click();
 
 		final WebElement error = getElementByclassName("errorInput");
-		String errorcheck = "";
 
-		if (error.isDisplayed()) {
-			errorcheck = "true";
-		}
-
-		assertEquals("true", errorcheck);
+		assertTrue(error.isDisplayed());
 
 		getEvidence(new Object() {
 		});
@@ -186,13 +176,7 @@ public class Case09 {
 
 		visibilityTimeout(By.className("errorInput"), 5);
 		final WebElement error = getElementByclassName("errorInput");
-		String errorcheck = "";
-
-		if (error.isDisplayed()) {
-			errorcheck = "true";
-		}
-
-		assertEquals("true", errorcheck);
+		assertTrue(error.isDisplayed());
 
 		getEvidence(new Object() {
 		});
@@ -215,13 +199,8 @@ public class Case09 {
 
 		visibilityTimeout(By.className("errorInput"), 5);
 		final WebElement error = getElementByclassName("errorInput");
-		String errorcheck = "";
 
-		if (error.isDisplayed()) {
-			errorcheck = "true";
-		}
-
-		assertEquals("true", errorcheck);
+		assertTrue(error.isDisplayed());
 
 		getEvidence(new Object() {
 		});
@@ -248,19 +227,8 @@ public class Case09 {
 		visibilityTimeout(By.className("errorInput"), 5);
 		final List<WebElement> error = getElementsByListClassName("errorInput");
 
-		String errorcheck = "";
-
-		if (error.get(0).isDisplayed()) {
-			errorcheck = "true";
-		}
-
-		assertEquals("true", errorcheck);
-
-		if (error.get(1).isDisplayed()) {
-			errorcheck = "true";
-		}
-
-		assertEquals("true", errorcheck);
+		assertTrue(error.get(0).isDisplayed());
+		assertTrue(error.get(1).isDisplayed());
 
 		getEvidence(new Object() {
 		});
@@ -294,20 +262,8 @@ public class Case09 {
 		visibilityTimeout(By.className("errorInput"), 5);
 		final List<WebElement> error = getElementsByListClassName("errorInput");
 
-		String feelerrorcheck = "";
-		String weekerrorcheck = "";
-
-		if (error.get(0).isDisplayed()) {
-			feelerrorcheck = "true";
-		}
-
-		assertEquals("true", feelerrorcheck);
-
-		if (error.get(1).isDisplayed()) {
-			weekerrorcheck = "true";
-		}
-
-		assertEquals("true", weekerrorcheck);
+		assertTrue(error.get(0).isDisplayed());
+		assertTrue(error.get(1).isDisplayed());
 
 		getEvidence(new Object() {
 		});
